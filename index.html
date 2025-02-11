@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Text Editor with GPT</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="editor-container">
+        <input type="password" id="apiKey" placeholder="กรอก API Key ที่นี่" />
+        <textarea id="editor" placeholder="เริ่มพิมพ์ที่นี่..." oninput="autoResize(this)"></textarea>
+        <input type="text" id="gptRequest" placeholder="ระบุคำขอให้ GPT ช่วยเขียน API body" />
+        <button onclick="getGPTResponse()">ส่งคำขอ</button>
+        <textarea id="gptResponse" placeholder="ผลลัพธ์จาก GPT..." readonly oninput="autoResize(this)"></textarea>
+      </div>
+      <script src="script.js"></script>
+    </body>
+    </html>
